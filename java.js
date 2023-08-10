@@ -1,24 +1,10 @@
-var div = document.getElementById('main');
-var display = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const errorPopup = document.getElementById('errorPopup');
+  const closePopupBtn = document.getElementById('closePopupBtn');
 
-function hideShow()
-{
-     if(display == 1)
-     {
-        div.style.display = 'block';
-        display = 0;
-     }
-     else
-     {
-        div.style.display = 'none';
-        display = 1;
-     }
-}
+  errorPopup.style.display = 'block'; // Show the popup when the page loads
 
-<script>
-    // JavaScript code to handle button click event
-    document.getElementById('showen').addEventListener('click', function() {
-      // Navigate to the error.html page when the button is clicked
-      window.location.href = 'error.html';
-    });
-  </script>
+  closePopupBtn.addEventListener('click', () => {
+    errorPopup.style.display = 'none';
+  });
+});
